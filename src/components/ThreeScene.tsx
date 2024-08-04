@@ -17,6 +17,7 @@ const ThreeScene: React.FC = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     mount.appendChild(renderer.domElement);
 
+
     // Sun
     const sunGeometry = new THREE.SphereGeometry(1.5, 32, 32);
     const sunMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
@@ -25,15 +26,15 @@ const ThreeScene: React.FC = () => {
 
     // Planets and Moon
     const celestialBodies = [
-      { name: 'Mercury', color: 0xb0b0b0, distance: 3, size: 0.3, speed: 0.00047 },
-      { name: 'Venus', color: 0xffa500, distance: 5, size: 0.5, speed: 0.00035 },
-      { name: 'Earth', color: 0x0000ff, distance: 7, size: 0.6, speed: 0.00030 },
-      { name: 'Mars', color: 0xff0000, distance: 9, size: 0.4, speed: 0.00024 },
+      { name: 'Mercury', color: 0xb0b0b0, distance: 2.5, size: 0.3, speed: 0.00047 },
+      { name: 'Venus', color: 0xffa500, distance: 4, size: 0.5, speed: 0.00035 },
+      { name: 'Earth', color: 0x0000ff, distance: 6, size: 0.6, speed: 0.00030 },
+      { name: 'Mars', color: 0xff0000, distance: 8, size: 0.4, speed: 0.00024 },
       { name: 'Jupiter', color: 0xffa07a, distance: 11, size: 1.2, speed: 0.00013 },
-      { name: 'Saturn', color: 0xffd700, distance: 14, size: 1.0, speed: 0.00009 },
-      { name: 'Uranus', color: 0x00ffff, distance: 16, size: 0.8, speed: 0.00007 },
-      { name: 'Neptune', color: 0x0000f0, distance: 18, size: 0.8, speed: 0.00005 },
-      { name: 'Pluto', color: 0xd2b48c, distance: 21, size: 0.2, speed: 0.00004 },
+      { name: 'Saturn', color: 0xffd700, distance: 14.5, size: 1.0, speed: 0.00009 },
+      { name: 'Uranus', color: 0x00ffff, distance: 17, size: 0.8, speed: 0.00007 },
+      { name: 'Neptune', color: 0x000080, distance: 20, size: 0.8, speed: 0.00005 }, // Updated color to Navy Blue
+      { name: 'Pluto', color: 0xd2b48c, distance: 22, size: 0.2, speed: 0.00004 },
     ];
 
     const planets = celestialBodies.map(data => {
