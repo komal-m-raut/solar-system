@@ -17,7 +17,6 @@ const ThreeScene: React.FC = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     mount.appendChild(renderer.domElement);
 
-
     // Sun
     const sunGeometry = new THREE.SphereGeometry(1.5, 32, 32);
     const sunMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
@@ -33,7 +32,7 @@ const ThreeScene: React.FC = () => {
       { name: 'Jupiter', color: 0xffa07a, distance: 11, size: 1.2, speed: 0.00013 },
       { name: 'Saturn', color: 0xffd700, distance: 14.5, size: 1.0, speed: 0.00009 },
       { name: 'Uranus', color: 0x00ffff, distance: 17, size: 0.8, speed: 0.00007 },
-      { name: 'Neptune', color: 0x000080, distance: 20, size: 0.8, speed: 0.00005 }, // Updated color to Navy Blue
+      { name: 'Neptune', color: 0x000080, distance: 20, size: 0.8, speed: 0.00005 },
       { name: 'Pluto', color: 0xd2b48c, distance: 22, size: 0.2, speed: 0.00004 },
     ];
 
@@ -55,14 +54,15 @@ const ThreeScene: React.FC = () => {
       const canvas = document.createElement('canvas');
       const context = canvas.getContext('2d');
       if (context) {
-        context.font = '24px Arial';
+        context.font = '48px Arial'; // Increased font size
         context.fillStyle = 'white';
-        context.fillText(data.name, 0, 24);
+        context.fillText(data.name, 0, 48); // Adjusted y position to match font size
       }
       const texture = new THREE.CanvasTexture(canvas);
       const labelMaterial = new THREE.SpriteMaterial({ map: texture });
       const label = new THREE.Sprite(labelMaterial);
-      label.scale.set(1, 0.5, 1);
+      label.scale.set(4, 2, 1); // Adjust scale as needed
+      label.position.set(0, data.size + 0.5, 0); // Position label above the planet
       planet.add(label);
 
       return { mesh: planet, distance: data.distance, speed: data.speed };
