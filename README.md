@@ -20,6 +20,20 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Using Three.js
+
+This project can also integrate with Three.js, a popular JavaScript library for creating 3D graphics in the browser.
+
+## Installation
+
+```bash
+npm install three
+# or
+yarn add three
+# or
+pnpm add three
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -28,6 +42,12 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+To learn more about Three.js, take a look at the following resources:
+
+- [Three.js Documentation](https://threejs.org/docs/) - learn about Three.js features and API.
+- [Three.js Fundamentals](https://threejsfundamentals.org/) - a comprehensive guide to learning Three.js.
+- [Discover Three.js](https://discoverthreejs.com/) - an interactive tutorial for Three.js.
 
 ## Deploy on Vercel
 
